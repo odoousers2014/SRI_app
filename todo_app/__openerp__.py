@@ -4,7 +4,7 @@
 	'author': 'Modus S.A.',
 	'version': '0.1.0',
 	'depends': ['mail'],
-	'application': True,
+	'application': False,
 	'data': [
 		'todo_view.xml',
 		'security/ir.model.access.csv',
