@@ -2,7 +2,7 @@
 	'name': 'To-Do Application',
 	'description': 'Manage your personal Tasks with this module.',
 	'author': 'Modus S.A.',
-	'version': 'v0.1.0',
+	'version': '0.1.0',
 	'depends': ['mail'],
 	'application': True,
 	'data': [
