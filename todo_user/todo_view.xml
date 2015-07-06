@@ -9,15 +9,15 @@
                 <field name="name" position="after">
                     <field name="user_id" />
                 </field>
-<!--                <xpath expr="//field[@name]='is_done'" position="before">
+                <xpath expr="//field[@name]='is_done'" position="before">
                     <field name="date_deadline" />
-                </xpath> -->
-                <field name="is_done" position="before">
+                </xpath>
+                <!-- <field name="is_done" position="before">
                     <field name="date_deadline" />
-                </field>
-                <field name="active" position="attributes">
+                </field> -->
+                <!-- <field name="active" position="attributes">
                     <attribute name="invisible">1</attribute>
-                </field>
+                </field> -->
                 <field name="name" position="attributes">
                     <attribute name="string">I have to...</attribute>
                 </field>
