@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
-        <record id="view_form_todo_task_inherited" model="ir.ui.view">
-            <field name="name">Todo Task form – User extension</field>
+<!--        <record id="view_form_todo_task_inherited" model="ir.ui.view">
+            <field name="name">Todo Task form - Users extension</field>
             <field name="model">todo.task</field>
             <field name="inherit_id" ref="todo_app.view_form_todo_task"/>
             <field name="arch" type="xml">
@@ -16,10 +16,10 @@
                     <attribute name="string" />I have to...<attribute/>
                 </field>
             </field>
-        </record>
+        </record> -->
 
         <record id="view_tree_todo_task_inherited" model="ir.ui.view">
-            <field name="name">Todo	Task tree – User extension</field>
+            <field name="name">Todo Task tree - User extension</field>
             <field name="model">todo.task</field>
             <field name="inherit_id" ref="todo_app.view_tree_todo_task"/>
             <field name="arch" type="xml">
@@ -30,7 +30,7 @@
         </record>
 
         <record id="view_filter_todo_task_inherited" model="ir.ui.view">
-            <field name="name">Todo Task tree – User extension</field>
+            <field name="name">Todo Task tree - User extension</field>
             <field name="model">todo.task</field>
             <field name="inherit_id" ref="todo_app.view_filter_todo_task"/>
             <field name="arch" type="xml">
