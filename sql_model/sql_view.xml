@@ -11,3 +11,19 @@
                 </tree>
             </field>
         </record>
+
+        <!-- Action to open SQL Report list -->
+        <act_window id="action_sql_report"
+                    name="SQL Report"
+                    res_model="sql.report"
+                    view_mode="tree" />
+
+        <!-- Menu item to open SQL Report list -->
+        <menuitem id="menu _sql_report"
+                  name="SQL Report"
+                  parent="mail.mail_feeds"
+                  sequence="30"
+                  action="action_sql_report" />
+
+    </data>
+</openerp>
