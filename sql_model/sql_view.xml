@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
-        <!-- <record id="view_tree_sql_report" model="ir.ui.view">
+        <record id="view_tree_sql_report" model="ir.ui.view">
             <field name="name">SQL Report Tree</field>
             <field name="model">sql.report</field>
             <field name="arch" type="xml">
                 <tree string="SQL Report">
-                    <field name="name"/>
+                    <field name="nombre"/>
                     <field name="total"/>
                 </tree>
             </field>
-        </record> -->
+        </record>
 
         <!-- Action to open SQL Report list -->
         <act_window id="action_sql_report"
