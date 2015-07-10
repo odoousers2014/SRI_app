@@ -3,7 +3,7 @@
 from openerp import models, fields, api
 from openerp import tools
 
-class sql_report(models.Model):
+class sql_model(models.Model):
     _name = 'sql.report'
     _auto = False
     nombre = fields.Char('Cliente', readonly=True),
