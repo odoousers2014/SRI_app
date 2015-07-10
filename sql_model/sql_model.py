@@ -6,7 +6,7 @@ from openerp import tools
 class sql_model(models.Model):
     _name = 'sql.report'
     _auto = False
-    nombre = fields.Integer('Cliente', readonly=True),
+    nombre = fields.Char('Cliente', readonly=True),
     total = fields.Integer('Total', readonly=True)
 
     def init(self, cr):
