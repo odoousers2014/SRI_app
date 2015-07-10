@@ -6,8 +6,8 @@ from openerp import tools
 class sql_model(models.Model):
     _name = 'sql.report'
     _auto = False
-    total = fields.Integer('Total', readonly=True),
     nombre = fields.Char('Cliente', readonly=True)
+    total = fields.Integer('Total', readonly=True)
 
     def init(self, cr):
         tools.sql.drop_view_if_exists(cr, 'sql_report')
