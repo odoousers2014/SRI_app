@@ -6,7 +6,7 @@
             <field name="model">sql.report</field>
             <field name="arch" type="xml">
                 <tree string="SQL Report">
-                    <field name="nombre"/>
+                    <field name="name"/>
                     <field name="total"/>
                 </tree>
             </field>
