@@ -10,9 +10,9 @@ class sql_model(models.Model):
     total = fields.Integer('Total', readonly=True)
 
     def init(self, cr):
-        tools.sql.drop_view_if_exists(cr, 'sql_model')
+        tools.sql.drop_view_if_exists(cr, 'sql_report')
         cr.execute("""
-                    CREATE OR REPLACE VIEW "sql_model" AS (
+                    CREATE OR REPLACE VIEW "sql_report" AS (
                     SELECT
                     "public".res_partner."name" AS "nombre",
                     Sum("public".account_invoice.amount_total) AS "total"
