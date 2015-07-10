@@ -6,7 +6,7 @@ from openerp import tools
 class sql_model(models.Model):
     _name = 'sql.report'
     _auto = False
-    name = fields.Char('Cliente', readonly=True),
+    nombre = fields.Text('Cliente', readonly=True),
     total = fields.Integer('Total', readonly=True)
 
     def init(self, cr):
@@ -15,13 +15,13 @@ class sql_model(models.Model):
                     CREATE OR REPLACE VIEW "sql_report" AS (
                     SELECT
                     ROW_NUMBER() over (order by "public".res_partner."name") AS "id",
-                    "public".res_partner."name",
+                    "public".res_partner."name" AS "nombre",
                     Sum("public".account_invoice.amount_total) AS "total"
                     FROM (account_invoice
                     JOIN res_partner ON (((account_invoice.commercial_partner_id = res_partner.id) AND (account_invoice.partner_id = res_partner.id))))
                     WHERE ((account_invoice.type)::text = 'out_invoice'::text)
                     GROUP BY
-                    "public".res_partner."name"
+                    "nombre"
                     )
         """)
 
