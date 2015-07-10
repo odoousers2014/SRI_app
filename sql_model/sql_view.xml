@@ -22,7 +22,7 @@
         <menuitem id="menu _sql_report"
                   name="SQL Report"
                   parent="mail.mail_feeds"
-                  sequence="30"
+                  sequence="20"
                   action="action_sql_report" />
 
     </data>
