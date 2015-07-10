@@ -14,6 +14,7 @@ class sql_model(models.Model):
         cr.execute("""
                     CREATE OR REPLACE VIEW "sql_report" AS (
                     SELECT
+                    ROW_NUMBER() over (order by "public".res_partner."name") AS "id",
                     "public".res_partner."name" AS "nombre",
                     Sum("public".account_invoice.amount_total) AS "total"
                     FROM (account_invoice
