@@ -2,7 +2,7 @@
 
 from openerp import models, fields, api
 
-class TodoTask(models.Model):
+class TodoTask(models.AbstractModel):
     _inherit = ['todo.task', 'mail.thread']
     user_id = fields.Many2one('res.users', 'Responsible')
     date_deadline = fields.Date('Deadline')
