@@ -6,7 +6,7 @@
             <field name="model">todo.task</field>
             <field name="arch" type="xml">
 
-                <!-- <form string="To-do	Task">
+                <!-- <form string="To-do Task">
                 <field name="name"/>
                 <field name="is_done"/>
                 <field name="active" readonly="1"/>
