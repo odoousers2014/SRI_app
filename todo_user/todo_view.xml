@@ -21,6 +21,14 @@
                 <field name="name" position="attributes">
                     <attribute name="string">I have to...</attribute>
                 </field>
+
+                <sheet position="after">
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+                </sheet>
+
             </field>
         </record>
 
@@ -47,6 +55,18 @@
                     <filter name="filter_not_assigned" string="Not Assigned"
                             domain="[('user_id','=',False)]" />
                 </field>
+            </field>
+        </record>
+
+        <!-- Modify menu item -->
+        <record id="todo_app.menu_todo_task" model="ir.ui.menu">
+            <field name="name">My To-Do</field>
+        </record>
+
+        <!-- Action to open To-Do Task list -->
+        <record model="ir.actions.act_window" id="todo_app.action_todo_task">
+            <field name="context">
+                {'search_default_filter_my_tasks': True}
             </field>
         </record>
     </data>
