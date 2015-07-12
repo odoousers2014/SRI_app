@@ -3,7 +3,7 @@
 from openerp import models, fields, api
 from openerp import tools
 
-class sql_model(models.Model):
+class SqlModel(models.Model):
     _name = 'sql.report'
     _auto = False
     nombre = fields.Char('Cliente', readonly=True)
@@ -25,4 +25,4 @@ class sql_model(models.Model):
                     )
         """)
 
-sql_model()
+SqlModel()
