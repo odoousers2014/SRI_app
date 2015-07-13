@@ -1,1 +1,1 @@
-from . import modus_informante
+from . import modus_retenciones
