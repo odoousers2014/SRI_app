@@ -10,7 +10,7 @@ from openerp import models, fields, api
 #   donde "_name" representa el nombre de la tabla en PostgreSQL
 #   donde "name" representa los nombres de las columnas
 
- class informante(models.Model):
+class informante(models.Model):
      _name = 'sri.informante'
 
      TipoIdInformante = fields.Char(string="Tipo Id Informante", required=True)
