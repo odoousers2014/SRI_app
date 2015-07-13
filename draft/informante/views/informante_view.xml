@@ -1,0 +1,128 @@
+<openerp>
+    <data>
+        <!-- <template id="listing"> -->
+        <!--   <ul> -->
+        <!--     <li t-foreach="objects" t-as="object"> -->
+        <!--       <a t-attf-href="#{ root }/objects/#{ object.id }"> -->
+        <!--         <t t-esc="object.display_name"/> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!--   </ul> -->
+        <!-- </template> -->
+        <!-- <template id="object"> -->
+        <!--   <h1><t t-esc="object.display_name"/></h1> -->
+        <!--   <dl> -->
+        <!--     <t t-foreach="object._fields" t-as="field"> -->
+        <!--       <dt><t t-esc="field"/></dt> -->
+        <!--       <dd><t t-esc="object[field]"/></dd> -->
+        <!--     </t> -->
+        <!--   </dl> -->
+        <!-- </template> -->
+
+        <record model="ir.ui.view" id="view_sri_informante_tree">
+            <field name="name">view.sri.informante.tree</field>
+            <field name="model">sri.informante</field>
+            <field name="arch" type="xml">
+
+        <!-- Definición del listado de identificación del informante -->
+
+                <tree string="Informantes Vista de Listado">
+                    <field name="TipoIdInformante"/>
+                    <field name="IdInformante"/>
+                    <field name="razonSocial"/>
+                    <field name="Anio"/>
+                    <field name="Mes"/>
+                    <field name="numEstabRuc"/>
+                    <field name="totalVentas"/>
+                    <field name="codigoOperativo"/>
+                </tree>
+
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_sri_informante_form">
+            <field name="name">view.sri.informante.form</field>
+            <field name="model">sri.informante</field>
+            <field name="arch" type="xml">
+
+        <!-- Definición del formulario de identificación del informante -->
+
+                <form string="Informante Vista de Formulario">
+                    <group colspan="4">
+                        <group colspan="2" col="2">
+                            <separator string="Columna1" colspan="2"/>
+                            <field name="TipoIdInformante"/>
+                            <field name="IdInformante"/>
+                            <field name="razonSocial"/>
+                        </group>
+
+                        <group colspan="2" col="2">
+                            <separator string="Columna2" colspan="2"/>
+                            <field name="Anio"/>
+                            <field name="Mes"/>
+                            <field name="numEstabRuc"/>
+                        </group>
+
+                        <notebook colspan="4">
+                            <page string="Pestaña">
+                                <field name="totalVentas"/>
+                            </page>
+                        </notebook>
+
+                        <field name="codigoOperativo"/>
+                    </group>
+                </form>
+
+            </field>
+        </record>
+
+        <!-- Definición de la acción a disparar la vista del menú -->
+
+        <record model="ir.actions.act_window" id="open_view_informante">
+            <field name="name">Informante</field>
+            <field name="res_model">sri.informante</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Definición de la opción del menú para Informantes -->
+
+        <!-- top level menu: no parent -->
+        <menuitem id="main_menu_sri_ats" name="Anexo Transaccional"/>
+       <!-- A first level in the left side menu is needed
+             before using action= attribute -->
+        <menuitem id="anexo_menu" name="Anexos" parent="main_menu_sri_ats"/>
+        <!-- the following menuitem should appear *after*
+             its parent openacademy_menu and *after* its
+             action course_list_action -->
+        <menuitem id="menu_informante" parent="anexo_menu" name="Informante" sequence="10" action="open_view_informante"/>
+
+        <!-- Full id location:
+             action="openacademy.course_list_action"
+             It is not required when it is the same module -->
+
+<!--        <record model="ir.ui.view" id="view_informante_inherit_form">
+
+            <field name="name">view.informante.inherit.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_account_position']" position="before">
+                    <field name="ruc"/>
+                </xpath>
+            </field>
+
+        </record> -->
+
+<!--        <record model="ir.ui.view" id="res_partnet_form_ruc">
+            <field name="name">res.partner.form.ruc.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <field name="property_account_position" position="before">
+                    <field name="vat"/>
+                </field>
+            </field>
+        </record> -->
+
+    </data>
+</openerp>
