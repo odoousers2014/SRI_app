@@ -23,14 +23,14 @@ class res_partner(models.Model):
                                                                   name, args, operator, context, limit)
             ids = [partner[0] for partner in partner_search]
             if not ids:
-                ids = self.search(cr, user, [('vat', operator, name)] + args,
+                ids = self.search(cr, user, [('numeroRuc', operator, name)] + args,
                                   limit=limit, context=context)
             if not ids:
                 ptrn = re.compile('(\[(.*?)\])')
                 res = ptrn.search(name)
                 if res:
                     ids = self.search(cr, user,
-                                      [('vat', operator, res.group(2))] + args, limit=limit,
+                                      [('numeroRuc', operator, res.group(2))] + args, limit=limit,
                                       context=context)
         else:
             return super(res_partner, self).name_search(cr, user,
@@ -48,7 +48,7 @@ class res_partner(models.Model):
         for record in res_name:
             partner = self.browse(cr, uid, record[0], context=context)
             name = record[1]
-            if partner.vat:
-                name = '[' + partner.vat + '] ' + name
+            if partner.numeroRuc:
+                name = '[' + partner.numeroRuc + '] ' + name
             res.append((record[0], name))
         return res
