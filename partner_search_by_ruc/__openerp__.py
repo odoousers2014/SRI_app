@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
 {
-    "name": "Search Partners by VAT",
+    "name": "Search Partners by RUC",
     "version": "1.0",
-    "author": "Ingenieria ADHOC",
+    "author": "Modus S.A.",
     "category": "",
     "description" : """
-Search Partners by VAT
+Search Partners by RUC
 ======================
     """,
-    "website": "www.ingadhoc.com",
+    "website": "www.oksigeno.com",
     "depends": ["base_vat",
                 ],
     "demo": [
