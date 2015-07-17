@@ -39,6 +39,6 @@
         'demo.xml',
     ],
     'auto_install': False,
-    'application': True,
+    'application': False,
     'installable': True,
 }
