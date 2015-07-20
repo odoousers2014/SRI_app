@@ -5,5 +5,7 @@
 	'version': '0.1.0',
 	'depends': ['base', 'account_accountant'],
 	'application': False,
-	'data': [],
+	'data': [
+		'modus_retenciones_view.xml',
+	],
 }
