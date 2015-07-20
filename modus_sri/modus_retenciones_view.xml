@@ -9,8 +9,8 @@
 
         <menuitem id="menu_modus_retenciones"
                   name="Retenciones"
-                  parent="menu_finance_payables"
-                  sequence="90"
+                  parent="menu_finance"
+                  sequence="20"
                   action="action_modus_retenciones" />
     </data>
 </openerp>
