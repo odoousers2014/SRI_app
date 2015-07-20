@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <act_window id="action_modus_retenciones"
+                    name="Modus Retencion"
+                    res_model="modus.retenciones"
+                    view_mode="tree,form" />
+
+        <menuitem id="menu_modus_retenciones"
+                  name="Retenciones"
+                  parent="menu_finance_payables"
+                  sequence="90"
+                  action="action_modus_retenciones" />
+    </data>
+</openerp>
