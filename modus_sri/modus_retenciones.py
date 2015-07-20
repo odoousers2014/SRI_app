@@ -18,5 +18,5 @@ class ModusRetencionesLine(models.Model):
     base_imponible = fields.Char('Base Imponible', required=True)
     codigo_impuesto = fields.Char('Código Impuesto', required=True)
     impuesto_retencion = fields.Char('Impuesto', required=True)
-    porcentaje_retencion = ('Porcentaje de Retención', required=True)
+    porcent_retencion = fields.Char('Porcentaje Retención', required=True)
     valor_retencion = fields.Char('Valor Retención', required=True)
