@@ -1,6 +1,40 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
+        <record id="view_form_modus_retenciones" model="ir.ui.view">
+            <field name="name">Retencion Form</field>
+            <field name="model">modus.retenciones</field>
+            <field name="arch" type="xml">
+
+                <form string="Retención">
+                    <header>
+                    <!-- <button name="retencion_print" string="Imprimir Retención"
+                    type="object" /> -->
+                    </header>
+
+                    <sheet string="Retención">
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field string="N° de Factura" name="name"/>
+                                <field string="Nombre" name="partner_name"/>
+                                <field string="Dirección" name="partner_address"/>
+                            </group>
+                            <group name="group_right">
+                                <field string="Fecha de Emisión" name="date_invoice"/>
+                                <field string="RUC" name="partner_ruc"/>
+                            </group>
+                        </group>
+                    <notebook colspan="4">
+                        <page string="Detalles de Retención">
+                            <field name="invoice_line" nolabel="1" widget="one2many_list" context="{'type': type}">
+                                <tree string="Invoice Lines" editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
         <act_window id="action_modus_retenciones"
                     name="Retencion"
                     res_model="modus.retenciones"
