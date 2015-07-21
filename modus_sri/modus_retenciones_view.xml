@@ -10,7 +10,7 @@
         <menuitem id="menu_modus_retenciones"
                   name="Retenciones"
                   parent="account.menu_finance_receivables"
-                  sequence="110"
+                  sequence="10"
                   action="action_modus_retenciones" />
     </data>
 </openerp>
