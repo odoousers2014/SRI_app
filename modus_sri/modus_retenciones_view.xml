@@ -3,14 +3,14 @@
     <data>
 
         <act_window id="action_modus_retenciones"
-                    name="Modus Retencion"
+                    name="Retencion"
                     res_model="modus.retenciones"
                     view_mode="tree,form" />
 
         <menuitem id="menu_modus_retenciones"
                   name="Retenciones"
-                  parent="menu_finance"
-                  sequence="20"
+                  parent="account.menu_finance_receivables"
+                  sequence="110"
                   action="action_modus_retenciones" />
     </data>
 </openerp>
