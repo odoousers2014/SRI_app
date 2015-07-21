@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
-
         <act_window id="action_modus_retenciones"
                     name="Retencion"
                     res_model="modus.retenciones"
