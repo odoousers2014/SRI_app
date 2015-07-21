@@ -24,16 +24,20 @@
                                 <field string="RUC" name="partner_ruc"/>
                             </group>
                         </group>
-                        <field colspan="4" name="retencion_line_ids" widget="one2many_list" >
-                            <tree string="Retenciones" editable="bottom">
-                                <field name="ejercicio_fiscal"/>
-                                <field name="base_imponible"/>
-                                <field name="codigo_impuesto"/>
-                                <field name="impuesto_retencion"/>
-                                <field name="porcent_retencion"/>
-                                <field name="valor_retencion"/>
-                            </tree>
-                        </field>
+                        <notebook colspan="4">
+                            <page string="Retencion Detalle">
+                                <field name="retencion_line_ids" widget="one2many_list">
+                                    <tree string="Retenciones" editable="bottom">
+                                        <field name="ejercicio_fiscal"/>
+                                        <field name="base_imponible"/>
+                                        <field name="codigo_impuesto"/>
+                                        <field name="impuesto_retencion"/>
+                                        <field name="porcent_retencion"/>
+                                        <field name="valor_retencion"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
