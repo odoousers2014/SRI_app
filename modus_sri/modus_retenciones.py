@@ -11,11 +11,11 @@ class ModusRetenciones(models.Model):
     partner_ruc = fields.Char('RUC', required=True)
     partner_address = fields.Char('Dirección', required=True)
 #    total_retencion = fields.Char('Total Retención', required=True)
-    retencion_line_ids = fields.one2many('modus.retenciones.line', 'retencion_id', 'Retencion'),
+    retencion_line_ids = fields.One2many('modus.retenciones.line', 'retencion_id', 'Retencion'),
 
 class ModusRetencionesLine(models.Model):
     _name = 'modus.retenciones.line'
-    retencion_id = fields.many2one('modus.retenciones', 'Retencion'),
+    retencion_id = fields.Many2one('modus.retenciones', 'retencion_line_ids', 'Retencion'),
     ejercicio_fiscal = fields.Char('Ejercicio Fiscal', required=True)
     base_imponible = fields.Char('Base Imponible', required=True)
     codigo_impuesto = fields.Char('Código Impuesto', required=True)
