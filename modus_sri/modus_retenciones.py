@@ -10,7 +10,7 @@ class ModusRetenciones(models.Model):
     partner_name = fields.Char('Nombre', required=True)
     partner_ruc = fields.Char('RUC', required=True)
     partner_address = fields.Char('Dirección', required=True)
-    total_retencion = fields.Char('Total Retención', required=True)
+#    total_retencion = fields.Char('Total Retención', required=True)
     retencion_line_ids = fields.one2many('modus.retenciones.line', 'retencion_id', 'Retencion'),
 
 class ModusRetencionesLine(models.Model):
