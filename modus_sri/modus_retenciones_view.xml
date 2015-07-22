@@ -2,33 +2,36 @@
 <openerp>
     <data>
 
-        <!-- <record id="view_form_modus_retenciones" model="ir.ui.view">
+        <record id="view_form_modus_retenciones" model="ir.ui.view">
             <field name="name">Retencion Form</field>
             <field name="model">modus.retenciones</field>
             <field name="arch" type="xml">
 
                 <form string="Retención">
-                    <header> -->
+                    <header>
                     <!-- <button name="retencion_print" string="Imprimir Retención"
                     type="object" /> -->
-                    <!-- </header>
+                    </header>
 
                     <sheet string="Retención">
                         <group name="group_top">
                             <group name="group_left">
-                                <field string="N° de Factura" name="name"/>
+                                <field string="Número de Retención" name="name"/>
                                 <field string="Nombre" name="partner_name"/>
                                 <field string="Dirección" name="partner_address"/>
                             </group>
                             <group name="group_right">
                                 <field string="Fecha de Emisión" name="date_invoice"/>
                                 <field string="RUC" name="partner_ruc"/>
+                                <field string="Items" name="items"/>
                             </group>
                         </group>
-                        <notebook colspan="4">
+
+                        <!-- <notebook colspan="4">
                             <page string="Details">
-                                <field name="modus_retenciones_line" widget="one2many_list" nolabel="1">
+                                <field name="retenciones_name" widget="one2many_list" nolabel="1">
                                     <tree string="Retenciones" editable="bottom">
+                                        <field name="name"/>
                                         <field name="ejercicio_fiscal"/>
                                         <field name="base_imponible"/>
                                         <field name="codigo_impuesto"/>
@@ -38,11 +41,11 @@
                                     </tree>
                                 </field>
                             </page>
-                        </notebook>
+                        </notebook> -->
                     </sheet>
                 </form>
             </field>
-        </record> -->
+        </record>
 
         <act_window id="action_modus_retenciones"
                     name="Retencion"
@@ -55,7 +58,7 @@
                   sequence="10"
                   action="action_modus_retenciones" />
 
-        <act_window id="action_modus_retenciones_line"
+        <!-- <act_window id="action_modus_retenciones_line"
                     name="Retencion Detalle"
                     res_model="modus.retenciones.line"
                     view_mode="tree,form" />
@@ -64,7 +67,7 @@
                   name="Retenciones Detalle"
                   parent="account.menu_finance_receivables"
                   sequence="11"
-                  action="action_modus_retenciones_line" />
+                  action="action_modus_retenciones_line" /> -->
 
     </data>
 </openerp>
