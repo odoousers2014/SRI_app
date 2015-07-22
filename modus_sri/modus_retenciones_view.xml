@@ -54,5 +54,17 @@
                   parent="account.menu_finance_receivables"
                   sequence="10"
                   action="action_modus_retenciones" />
+
+        <act_window id="action_modus_retenciones_line"
+                    name="Retencion Detalle"
+                    res_model="modus.retenciones.line"
+                    view_mode="tree,form" />
+
+        <menuitem id="menu_modus_retenciones_line"
+                  name="Retenciones Detalle"
+                  parent="account.menu_finance_receivables"
+                  sequence="11"
+                  action="action_modus_retenciones_line" />
+
     </data>
 </openerp>
