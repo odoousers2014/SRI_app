@@ -23,9 +23,15 @@
                             <group name="group_right">
                                 <field string="Fecha de Emisión" name="date_invoice"/>
                                 <field string="RUC" name="partner_ruc"/>
-                                <field string="Items" name="items"/>
                             </group>
                         </group>
+                        <notebook colspan="4">
+                                <page string="Detalles">
+                                        <field string="Items" name="items"/>
+                                </page>
+                        </notebook>
+
+
 
                         <!-- <notebook colspan="4">
                             <page string="Details">
