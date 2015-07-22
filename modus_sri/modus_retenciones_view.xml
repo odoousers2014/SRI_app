@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
+
         <record id="view_form_modus_retenciones" model="ir.ui.view">
             <field name="name">Retencion Form</field>
             <field name="model">modus.retenciones</field>
