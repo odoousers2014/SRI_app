@@ -68,7 +68,7 @@
                         <notebook colspan="4">
                                 <page string="Detalles">
                                         <field widget="one2many_list" name="items" nolabel="1"/>
-                                            <tree string="Retenciones Tree" editable="bottom">
+                                            <tree string="Retenciones" editable="bottom">
                                                 <field name="name"/>
                                                 <field name="ejercicio_fiscal"/>
                                                 <field name="base_imponible"/>
