@@ -2,6 +2,46 @@
 <openerp>
     <data>
 
+        <record id="view_tree_modus_retenciones_line" model="ir.ui.view">
+            <field name="name">Retenciones Tree</field>
+            <field name="model">modus.retenciones.line</field>
+            <field name="arch" type="xml">
+                <tree string="Retenciones">
+                    <field name="name"/>
+                    <field name="ejercicio_fiscal"/>
+                    <field name="base_imponible"/>
+                    <field name="codigo_impuesto"/>
+                    <field name="impuesto_retencion"/>
+                    <field name="porcent_retencion"/>
+                    <field name="valor_retencion"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_form_modus_retenciones_line" model="ir.ui.view">
+            <field name="name">Retenciones Form</field>
+            <field name="model">modus.retenciones.line</field>
+            <field name="arch" type="xml">
+                <form string="Retenciones Form">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <div>
+                                <field name="ejercicio_fiscal"/>
+                            </div>
+                            <field name="base_imponible"/>
+                            <field name="codigo_impuesto"/>
+                        </group>
+                        <group>
+                            <field name="impuesto_retencion"/>
+                            <field name="porcent_retencion"/>
+                        </group>
+                    </group>
+                    <field name="valor_retencion"/>
+                </form>
+            </field>
+        </record>
+
         <record id="view_form_modus_retenciones" model="ir.ui.view">
             <field name="name">Retencion Form</field>
             <field name="model">modus.retenciones</field>
@@ -28,8 +68,7 @@
                         <notebook colspan="4">
                                 <page string="Detalles">
                                         <field widget="one2many_list" name="items" nolabel="1"/>
-                                            <tree string="Retenciones" editable="bottom">
-                                                <field name="ejercicio_fiscal"/>
+                                            <tree string="Retenciones Tree" editable="bottom">
                                                     <!-- <field name="modus_retenciones_line.ejercicio_fiscal"/> -->
                                             </tree>
                                 </page>
@@ -66,7 +105,7 @@
                   sequence="10"
                   action="action_modus_retenciones" />
 
-        <!-- <act_window id="action_modus_retenciones_line"
+        <act_window id="action_modus_retenciones_line"
                     name="Retencion Detalle"
                     res_model="modus.retenciones.line"
                     view_mode="tree,form" />
@@ -75,7 +114,7 @@
                   name="Retenciones Detalle"
                   parent="account.menu_finance_receivables"
                   sequence="11"
-                  action="action_modus_retenciones_line" /> -->
+                  action="action_modus_retenciones_line" />
 
     </data>
 </openerp>
