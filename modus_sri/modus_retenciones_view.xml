@@ -7,7 +7,6 @@
             <field name="model">modus.retenciones.line</field>
             <field name="arch" type="xml">
                 <tree string="Retenciones" editable="bottom">
-                    <field name="name"/>
                     <field name="ejercicio_fiscal"/>
                     <field name="base_imponible"/>
                     <field name="codigo_impuesto"/>
@@ -67,7 +66,7 @@
                         </group>
                         <notebook colspan="4">
                                 <page string="Detalles">
-                                        <field name="items" nolabel="1"/>
+                                        <field name="items"/>
                                 </page>
                         </notebook>
 
