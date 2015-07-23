@@ -48,8 +48,8 @@
 
                 <form string="Retención">
                     <header>
-                    <!-- <button name="retencion_print" string="Imprimir Retención"
-                    type="object" /> -->
+                        <!-- button name="%(account_invoices)d" string="Print Invoice" type="action" states="open,paid,proforma,sale,proforma2"/> -->
+                        <!-- <button name="retencion_print" string="Imprimir Retención" type="object" /> -->
                     </header>
 
                     <sheet string="Retención">
