@@ -16,7 +16,7 @@ class ModusRetenciones(models.Model):
 class ModusRetencionesLine(models.Model):
     _name = 'modus.retenciones.line'
     name = fields.Char('Item')
-#    item_id = fields.Many2one('modus.retenciones', 'Número de Retención', required=True)
+#    item_id = fields.Many2one('modus.retenciones', 'Número de Retención')
     ejercicio_fiscal = fields.Char('Ejercicio Fiscal')
     base_imponible = fields.Char('Base Imponible')
     codigo_impuesto = fields.Char('Código Impuesto')
