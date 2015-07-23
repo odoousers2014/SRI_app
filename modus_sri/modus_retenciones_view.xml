@@ -69,14 +69,13 @@
                                 <page string="Detalles">
                                         <field widget="one2many_list" name="items" nolabel="1"/>
                                             <tree string="Retenciones" editable="bottom">
-                                                <field name="name"/>
+                                                <!-- <field name="name"/>
                                                 <field name="ejercicio_fiscal"/>
                                                 <field name="base_imponible"/>
                                                 <field name="codigo_impuesto"/>
                                                 <field name="impuesto_retencion"/>
                                                 <field name="porcent_retencion"/>
-                                                <field name="valor_retencion"/>
-                                                    <!-- <field name="modus_retenciones_line.ejercicio_fiscal"/> -->
+                                                <field name="valor_retencion"/> -->
                                             </tree>
                                 </page>
                         </notebook>
