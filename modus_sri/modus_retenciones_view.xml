@@ -18,7 +18,7 @@
             </field>
         </record>
 
-        <record id="view_form_modus_retenciones_line" model="ir.ui.view">
+        <!-- <record id="view_form_modus_retenciones_line" model="ir.ui.view">
             <field name="name">Retenciones Form</field>
             <field name="model">modus.retenciones.line</field>
             <field name="arch" type="xml">
@@ -40,7 +40,7 @@
                     <field name="valor_retencion"/>
                 </form>
             </field>
-        </record>
+        </record> -->
 
         <record id="view_form_modus_retenciones" model="ir.ui.view">
             <field name="name">Retencion Form</field>
@@ -69,6 +69,13 @@
                                 <page string="Detalles">
                                         <field widget="one2many_list" name="items" nolabel="1"/>
                                             <tree string="Retenciones Tree" editable="bottom">
+                                                <field name="name"/>
+                                                <field name="ejercicio_fiscal"/>
+                                                <field name="base_imponible"/>
+                                                <field name="codigo_impuesto"/>
+                                                <field name="impuesto_retencion"/>
+                                                <field name="porcent_retencion"/>
+                                                <field name="valor_retencion"/>
                                                     <!-- <field name="modus_retenciones_line.ejercicio_fiscal"/> -->
                                             </tree>
                                 </page>
@@ -105,7 +112,7 @@
                   sequence="10"
                   action="action_modus_retenciones" />
 
-        <act_window id="action_modus_retenciones_line"
+        <!-- <act_window id="action_modus_retenciones_line"
                     name="Retencion Detalle"
                     res_model="modus.retenciones.line"
                     view_mode="tree,form" />
@@ -114,7 +121,7 @@
                   name="Retenciones Detalle"
                   parent="account.menu_finance_receivables"
                   sequence="11"
-                  action="action_modus_retenciones_line" />
+                  action="action_modus_retenciones_line" /> -->
 
     </data>
 </openerp>
