@@ -28,13 +28,12 @@
                         <notebook colspan="4">
                                 <page string="Detalles">
                                         <field widget="one2many_list" name="items" nolabel="1"/>
-                                            <!-- <tree string="Retenciones" editable="bottom">
-                                                    <field name="modus_retenciones_line.ejercicio_fiscal"/>
-                                            </tree> -->
+                                            <tree string="Retenciones" editable="bottom">
+                                                <field name="ejercicio_fiscal"/>
+                                                    <!-- <field name="modus_retenciones_line.ejercicio_fiscal"/> -->
+                                            </tree>
                                 </page>
                         </notebook>
-
-
 
                         <!-- <notebook colspan="4">
                             <page string="Details">
