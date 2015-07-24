@@ -22,7 +22,7 @@ class ModusRetencionesLine(models.Model):
     codigo_impuesto = fields.Char('Código Impuesto')
     impuesto_retencion = fields.Char('Impuesto')
     porcent_retencion = fields.Float('Porcentaje Retención')
-    valor_retencion = fields.Float('Valor Retención', compute='_compute_valor_retencion')
+    valor_retencion = fields.Float('Valor Retención', compute='_compute_valor_retencion', store=True)
 
     @api.one
     @api.depends('base_imponible', 'porcent_retencion')
