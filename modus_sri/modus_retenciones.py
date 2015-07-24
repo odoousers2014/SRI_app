@@ -18,10 +18,16 @@ class ModusRetencionesLine(models.Model):
     name = fields.Char('Item')
 #    item_id = fields.Many2one('modus.retenciones', 'Número de Retención')
     ejercicio_fiscal = fields.Char('Ejercicio Fiscal')
-    base_imponible = fields.Char('Base Imponible')
+    base_imponible = fields.Float('Base Imponible')
     codigo_impuesto = fields.Char('Código Impuesto')
-    impuesto_retencion = fields.Char('Impuesto')
+    impuesto_retencion = fields.Float('Impuesto')
     porcent_retencion = fields.Char('Porcentaje Retención')
-    valor_retencion = fields.Char('Valor Retención')
+    valor_retencion = fields.Float('Valor Retención', compute='_compute_valor_retencion')
+
+    @api.one
+    @api.depends('base_imponible', 'porcent_retencion')
+    def _compute_valor_retencion(self):
+        for record in self:
+            record.valor_retencion = record.base_imponible * (record.porcent_retencion / 100)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
