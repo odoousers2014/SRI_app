@@ -2,9 +2,9 @@
 <openerp>
     <data>
 
-        <record id="view_tree_modus_retenciones_line" model="ir.ui.view">
+        <record id="view_tree_retenciones_line" model="ir.ui.view">
             <field name="name">Retenciones Tree</field>
-            <field name="model">modus.retenciones.line</field>
+            <field name="model">retenciones.line</field>
             <field name="arch" type="xml">
                 <tree string="Retenciones" editable="bottom">
                     <field name="ejercicio_fiscal"/>
@@ -17,9 +17,9 @@
             </field>
         </record>
 
-        <!-- <record id="view_form_modus_retenciones_line" model="ir.ui.view">
+        <!-- <record id="view_form_retenciones_line" model="ir.ui.view">
             <field name="name">Retenciones Form</field>
-            <field name="model">modus.retenciones.line</field>
+            <field name="model">retenciones.line</field>
             <field name="arch" type="xml">
                 <form string="Retenciones Form">
                     <group>
@@ -67,9 +67,9 @@
                                 <page string="Detalles">
                                         <field name="items"/>
                                 </page>
-                            <group class="oe_subtotal_footer oe_right">
+                            <!-- <group class="oe_subtotal_footer oe_right">
                                 <field name="total_retencion" class="oe_subtotal_footer_separator" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                            </group>
+                            </group> -->
                         </notebook>
 
                         <!-- <notebook colspan="4">
