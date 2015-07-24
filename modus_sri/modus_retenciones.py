@@ -20,8 +20,8 @@ class ModusRetencionesLine(models.Model):
     ejercicio_fiscal = fields.Char('Ejercicio Fiscal')
     base_imponible = fields.Float('Base Imponible')
     codigo_impuesto = fields.Char('Código Impuesto')
-    impuesto_retencion = fields.Float('Impuesto')
-    porcent_retencion = fields.Char('Porcentaje Retención')
+    impuesto_retencion = fields.Char('Impuesto')
+    porcent_retencion = fields.Float('Porcentaje Retención')
     valor_retencion = fields.Float('Valor Retención', compute='_compute_valor_retencion')
 
     @api.one
