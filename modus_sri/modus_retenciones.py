@@ -11,7 +11,7 @@ class ModusRetenciones(models.Model):
     partner_name = fields.Char('Nombre', required=True)
     partner_ruc = fields.Char('RUC', required=True)
     partner_address = fields.Char('Dirección', required=True)
-#    total_retencion = fields.Char('Total Retención', required=True)
+    total_retencion = fields.Float('Total Retención', compute='_compute_total_retencion', store=True)
 
 class ModusRetencionesLine(models.Model):
     _name = 'modus.retenciones.line'
@@ -29,5 +29,11 @@ class ModusRetencionesLine(models.Model):
     def _compute_valor_retencion(self):
         for record in self:
             record.valor_retencion = record.base_imponible * (record.porcent_retencion / 100)
+
+    @api.one
+    @api.depends('modus_retenciones_line.valor_retencion')
+    def _compute_total_retencion(self):
+        for record in self:
+            record.total_retencion = sum(line.valor_retencion for line in record.modus_retenciones_line)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
