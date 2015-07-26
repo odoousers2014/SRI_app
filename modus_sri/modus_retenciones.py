@@ -4,7 +4,7 @@ from openerp import models, fields, api
 class ModusRetencionesLine(models.Model):
     _name = 'modus.retenciones.line'
     name = fields.Char('Item')
-#    item_id = fields.Many2one('modus.retenciones', 'Número de Retención')
+    retencion_id = fields.Many2one('modus.retenciones', 'Número de Retención', index=True)
     ejercicio_fiscal = fields.Char('Ejercicio Fiscal')
     base_imponible = fields.Float('Base Imponible', required=True)
     codigo_impuesto = fields.Char('Código Impuesto')
@@ -31,10 +31,10 @@ class ModusRetenciones(models.Model):
     total_retencion = fields.Float('Total Retención', compute='_compute_total_retencion', store=True)
 
     @api.one
-    @api.depends('modus_retenciones_line.valor_retencion')
+    @api.depends('items.valor_retencion')
     def _compute_total_retencion(self):
-#        self.total_retencion = sum(line.valor_retencion for line in self.modus_retenciones_line)
+#        self.total_retencion = sum(line.valor_retencion for line in self.items)
         for record in self:
-            record.total_retencion = sum(line.valor_retencion for line in record.modus_retenciones_line)
+            record.total_retencion = sum(line.valor_retencion for line in record.items)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

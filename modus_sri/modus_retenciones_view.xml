@@ -67,10 +67,10 @@
                                 <page string="Detalles">
                                         <field name="items"/>
                                 </page>
-                            <group class="oe_subtotal_footer oe_right">
-                                <field name="total_retencion" class="oe_subtotal_footer_separator" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                            </group>
                         </notebook>
+                        <group class="oe_subtotal_footer oe_right">
+                            <field string="Valor Total" name="total_retencion" class="oe_subtotal_footer_separator" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                        </group>
 
                         <!-- <notebook colspan="4">
                             <page string="Details">
