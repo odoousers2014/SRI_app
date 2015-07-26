@@ -64,13 +64,18 @@
                             </group>
                         </group>
                         <notebook colspan="4">
-                                <page string="Detalles">
-                                        <field name="items"/>
-                                </page>
+                            <page string="Detalles">
+                                <field name="items"/>
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field string="Valor Total Retención" name="total_retencion" class="oe_subtotal_footer_separator" widget="monetary"/>
+                                </group>
+                                <div class="oe_clear">
+                                    <label for="comment"/>
+                                </div>
+                                <field name="comment"/>
+                            </page>
                         </notebook>
-                        <group class="oe_subtotal_footer oe_right">
-                            <field string="Valor Total" name="total_retencion" class="oe_subtotal_footer_separator" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                        </group>
+
 
                         <!-- <notebook colspan="4">
                             <page string="Details">

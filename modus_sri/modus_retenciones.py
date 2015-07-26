@@ -29,6 +29,7 @@ class ModusRetenciones(models.Model):
     partner_ruc = fields.Char('RUC', required=True)
     partner_address = fields.Char('Dirección', required=True)
     total_retencion = fields.Float('Total Retención', compute='_compute_total_retencion', store=True)
+    comment = fields.Text('Información Adicional')
 
     @api.one
     @api.depends('items.valor_retencion')
