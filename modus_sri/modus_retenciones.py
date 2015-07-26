@@ -6,11 +6,11 @@ class ModusRetencionesLine(models.Model):
     name = fields.Char('Item')
     retencion_id = fields.Many2one('modus.retenciones', 'Número de Retención', index=True)
     ejercicio_fiscal = fields.Char('Ejercicio Fiscal')
-    base_imponible = fields.Float('Base Imponible', required=True)
+    base_imponible = fields.Float('Base Imponible', digits=(12,2), required=True)
     codigo_impuesto = fields.Char('Código Impuesto')
     impuesto_retencion = fields.Char('Impuesto')
-    porcent_retencion = fields.Float('Porcentaje Retención', required=True)
-    valor_retencion = fields.Float('Valor Retención', compute='_compute_valor_retencion', store=True)
+    porcent_retencion = fields.Float('Porcentaje Retención', digits=(3,0), required=True)
+    valor_retencion = fields.Float('Valor Retención', compute='_compute_valor_retencion', digits=(12,2), store=True)
 
     @api.one
     @api.depends('base_imponible', 'porcent_retencion')

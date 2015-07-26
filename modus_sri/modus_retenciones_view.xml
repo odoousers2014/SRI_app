@@ -11,7 +11,7 @@
                     <field name="base_imponible" widget="monetary"/>
                     <field name="codigo_impuesto"/>
                     <field name="impuesto_retencion"/>
-                    <field name="porcent_retencion"/>
+                    <field string="% Porcentaje Retención" name="porcent_retencion"/>
                     <field name="valor_retencion" widget="monetary"/>
                 </tree>
             </field>
