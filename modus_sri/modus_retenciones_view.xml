@@ -67,7 +67,7 @@
                             <page string="Detalles">
                                 <field name="items"/>
                                 <group class="oe_subtotal_footer oe_right">
-                                    <field string="Valor Total Retención" name="total_retencion" class="oe_subtotal_footer_separator" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field string="Valor Total Retención $" name="total_retencion" class="oe_subtotal_footer_separator"/>
                                 </group>
                                 <div class="oe_clear">
                                     <label for="comment"/>
